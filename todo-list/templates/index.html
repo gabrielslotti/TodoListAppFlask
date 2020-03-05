@@ -17,13 +17,13 @@
             <h3>Incompletos:</h3>
             <ul>
                 {% for todo in incomplete %}
-                <li style='font-size: 15pt'>{{todo.text}} <a href="{{ url_for('complete', id=todo.id) }}">marcar como completo</a></li>
+                <li style='font-size: 15pt'>{{todo.text}} <a href="{{ url_for('complete', id=todo.id) }}">[complete]</a></li>
                 {% endfor %}
             </ul>
             <h3>Completos:</h3>
             <ul>
                     {% for todo in complete %}
-                     <li style='font-size: 15pt'>{{todo.text}} <a href="{{ url_for('delete', id=todo.id) }}">deletar</a></li>
+                     <li style='font-size: 15pt'>{{todo.text}} <a href="{{ url_for('delete', id=todo.id) }}">[x]</a></li>
                     {% endfor %}
                 </ul>
         </form>
